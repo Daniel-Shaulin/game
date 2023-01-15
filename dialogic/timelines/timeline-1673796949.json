@@ -1,0 +1,95 @@
+{
+	"events": [
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1673796734.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "df-3",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1673796734.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "olá tudo bem com você?"
+		},
+		{
+			"event_id": "dialogic_025",
+			"extra": "",
+			"glossary_id": "",
+			"text": "",
+			"title": ""
+		},
+		{
+			"choice": "sim",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1673796734.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "se foda!"
+		},
+		{
+			"choice": "vá te fuder vagabunda do caralho",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1673796734.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "vá você desgraçado"
+		},
+		{
+			"choice": "Sair",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1673796734.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Já vai tarde, filho da puta!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1673796949.json",
+		"name": "Samira - salao principal"
+	}
+}

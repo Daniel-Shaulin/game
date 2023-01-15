@@ -1,0 +1,21 @@
+{
+	"color": "#ff9816b7",
+	"description": "Criada do salão especial",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1673796734.json",
+	"mirror_portraits": false,
+	"name": "Samira",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 200,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": ""
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1673806669.cfg"
+}
