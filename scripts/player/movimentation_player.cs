@@ -1,12 +1,37 @@
 using Godot;
 using System;
-
 public class movimentation_player : KinematicBody2D
 {
     private Vector2 velocity;
-    public override void _PhysicsProcess(float delta)
-    {
+
+    Polygon2D statusLayer;
+
+    private Boolean isStatusShow = false;
+
+    public override void _Ready(){
+        statusLayer = this.GetNode<Polygon2D>("status");
+        statusLayer.Hide(); 
+        base._Ready();
+    }
+
+    public override void _Process(float delta) {
+        StatusLayer statusObject = new StatusLayer();
+         if(Input.IsActionJustPressed("ui_status_bar")){
+            if(!PlayerStatus.isCool && !isStatusShow){
+                statusObject.callStatusLayer(statusLayer);
+                PlayerStatus.isCool = true;
+                statusLayer.Show();
+            }else{
+                PlayerStatus.isCool = false;
+                statusLayer.Hide();
+            }
+        }
+        base._Process(delta);
+    }
+    public override void _PhysicsProcess(float delta){
+        
         Vector2 moviment = Vector2.Zero;
+
         if(!PlayerStatus.isCool){
             moviment.x = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
             moviment.y = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");

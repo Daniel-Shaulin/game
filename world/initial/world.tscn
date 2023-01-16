@@ -3,7 +3,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://mobs/main/player_caractor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://mobs/npc/samira/samira.tscn" type="PackedScene" id=3]
-[ext_resource path="res://world/initial/santuario.gd" type="Script" id=4]
+[ext_resource path="res://mobs/enemies/enemy.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CanvasItemMaterial" id=2]
 
@@ -11,9 +11,10 @@
 extents = Vector2( 30.5, 14.5 )
 
 [node name="word" type="YSort"]
-script = ExtResource( 4 )
+position = Vector2( -1, 0 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1, -1 )
 rotation = -0.00114182
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -30,3 +31,6 @@ shape = SubResource( 1 )
 
 [node name="npc" parent="." instance=ExtResource( 3 )]
 position = Vector2( -265, -58 )
+
+[node name="enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 291, 66 )
