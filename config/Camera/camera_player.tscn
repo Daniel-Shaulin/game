@@ -1,9 +1,11 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://config/camera/life_bar_player.tscn" type="PackedScene" id=1]
 
 [node name="camera" type="Camera2D"]
 current = true
 zoom = Vector2( 1.6, 2 )
 process_mode = 0
-smoothing_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -349, -238 )

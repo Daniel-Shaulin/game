@@ -12,7 +12,7 @@ public class StatusLayer : Polygon2D
     [Obsolete]
     public void callStatusLayer(Polygon2D node){
         populate(node);
-        life.SetText(String.Concat("Vida: ", PlayerStatus.base_life));
+        life.SetText(String.Concat("Vida: ", PlayerStatus.max_base_life));
         stamina.SetText(String.Concat("Estamina: ", PlayerStatus.stamina));
         experience.SetText(String.Concat("Experiência: ", PlayerStatus.base_experience));
         habilities.SetText(String.Concat("Habilidades: ", String.Join(", ", PlayerStatus.habilities)));

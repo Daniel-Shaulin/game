@@ -8,8 +8,11 @@ public class movimentation_player : KinematicBody2D
 
     private Boolean isStatusShow = false;
 
+    Area2D colisionArea;
+
     public override void _Ready(){
         statusLayer = this.GetNode<Polygon2D>("status");
+        colisionArea = this.GetNode<Area2D>("box_area");
         statusLayer.Hide(); 
         base._Ready();
     }
@@ -25,6 +28,10 @@ public class movimentation_player : KinematicBody2D
                 PlayerStatus.isCool = false;
                 statusLayer.Hide();
             }
+        }
+
+        if(!PlayerStatus.isDominating){
+            GD.Print((uint) AreaConfig.area_enum.enemies);
         }
         base._Process(delta);
     }

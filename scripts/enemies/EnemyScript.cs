@@ -4,13 +4,17 @@ using System;
 public class EnemyScript : KinematicBody2D
 {
     Vector2 moviment = Vector2.Zero;
-
     public override void _Ready()
     {
         base._Ready();
     }
+
+    public override void _Process(float delta){
+    }
+
     
     public void onAreaEntered(PhysicsBody2D body){
+        PlayerStatus.current_base_life -= 50;
         GD.Print(body.GetPosition());
     }
 
